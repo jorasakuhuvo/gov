@@ -37,7 +37,7 @@ position:relative;
 height:140px;
 position:absolute;
 left:0;
-bottom:-10px;
+bottom:0px;
 }
   
 .titleblock{
@@ -80,31 +80,33 @@ font-size:15px;
 text-decoration:underline;
 }
 
-#joradate{
-width:1100px;
-margin:20px auto;
-text-align:center;
-font-size:16px;
-color:#333;
-}
-
 .container{
 width:1100px;
 margin:auto;
 margin-top:20px;
-display:flex;
-gap:20px;
 }
 
-.column{
-width:330px;
-flex:1;
+/* 第一行布局 */
+
+.row{
+display:flex;
+gap:20px;
+margin-bottom:20px;
 }
+
+.left{
+width:66%;
+}
+
+.right{
+width:34%;
+}
+
+/* box */
 
 .box{
 background:white;
 padding:15px;
-margin-bottom:20px;
 }
 
 .box h3{
@@ -114,16 +116,67 @@ padding:8px;
 margin:-15px -15px 10px -15px;
 }
 
-img{
-max-width:100%;
-margin-top:10px;
-margin-bottom:10px;
+.sidebar{
+background:#ffffff;
+max-height:650px;
+overflow-y:auto;
+}
+
+.full{
+margin-top:20px;
 }
 
 .footer{
 text-align:center;
 padding:20px;
 font-size:12px;
+}
+
+/* 总统信息布局 */
+
+.president{
+display:flex;
+gap:15px;
+}
+
+.president-photo{
+width:180px;
+aspect-ratio:5/7;
+object-fit:contain;
+}
+
+.president-text{
+flex:1;
+}
+
+/* 投票条 */
+
+.vote{
+display:flex;
+align-items:center;
+gap:8px;
+margin:6px 0;
+}
+
+.bar{
+flex:1;
+height:14px;
+background:#ddd;
+border-radius:4px;
+}
+
+.fill{
+height:14px;
+background:#3b5b8a;
+border-radius:4px;
+}
+
+.yes{
+font-weight:bold;
+}
+
+.no{
+color:#888;
 }
 
 @font-face{
@@ -133,7 +186,7 @@ src:url("kasu-jorasakuhuvo.ttf");
 
 @font-face{
 font-family:Domine;
-src: url("Domine-VariableFont_wght.ttf");
+src:url("Domine-VariableFont_wght.ttf");
 }
 
 </style>
@@ -170,29 +223,108 @@ src: url("Domine-VariableFont_wght.ttf");
 
 <div class="container">
 
-<div class="column">
+<!-- 第一行 -->
+
+<div class="row">
+
+<div class="left">
 
 <div class="box">
 
-<h3>Structure</h3>
+<h3>About the President</h3>
 
-<p>Content here.</p>
+<div class="president">
+
+<img src="president.png" class="president-photo">
+
+<div class="president-text">
+
+<p><b>Current President – <i>1st</i> President of Jorasakuhuvo</b></p>
+
+<p><b>Name:</b> Pemife Noraane</p>
+
+<p><b>Term of Office:</b> V.T. 2090-02-01 ~ V.T. 2090-04-07 (2026-01-29 ~ 2026-04-29)</p>
+
+<p><b>Nationality:</b> Vaso Jorasakuhuvian</p>
+
+<p><b>Votes Received:</b> 1</p>
+
+<p><b>Eligible Voters:</b> 1</p>
+
+<p><b>Turnout:</b> 100%</p>
 
 </div>
 
+</div>
 
-<div class="box">
+</div>
+
+</div>
+
+<div class="right">
+
+<div class="box sidebar">
+
+<h3>Election History</h3>
+
+<p><b>V.T. 2090 Natuno 1 (January 2026)</b></p>
+
+<b>Candidates:</b> Pemife Noraane<br>
+
+<div class="vote">
+
+<span class="yes">1</span>
+
+<div class="bar">
+<div class="fill" style="width:100%"></div>
+</div>
+
+<span class="no">0</span>
+
+</div>
+
+<p><b>Eligible Voters:</b> 1</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- 第二行 -->
+
+<div class="box full">
+
+<h3>Government Structure</h3>
+
+<p>
+The Republic of Jorasakuhuvo is governed by a presidential system.
+</p>
+
+<p>
+The President serves as the head of state and government and is responsible
+for administration, national policy, and foreign communication.
+</p>
+
+<p>
+Public proposals and recommendations may be submitted by citizens.
+</p>
+
+</div>
+
+<div class="box full">
 
 <h3>Institutions</h3>
 
-<p>More content here.</p>
+<p>
+Office of the President<br>
+Foreign Affairs<br>
+Cultural Affairs
+</p>
 
 </div>
 
 </div>
-
-</div>
-
 
 <div class="footer">
 
