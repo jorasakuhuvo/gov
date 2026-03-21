@@ -78,6 +78,34 @@ font-size:15px;
 text-decoration:underline;
 }
 
+/* dropdown */
+
+.dropdown{
+display:inline-block;
+position:relative;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:#214a7a;
+min-width:180px;
+top:100%;
+left:0;
+text-align:left;
+padding:10px 0;
+}
+
+.dropdown-content a{
+display:block;
+margin:8px 15px;
+font-size:14px;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
 #joradate{
 width:1100px;
 margin:20px auto;
@@ -163,7 +191,23 @@ text-decoration:underline;
 <div class="nav">
 
 <a href="index.html">Home</a>
+
+<div class="dropdown">
+
 <a href="government.html">Government</a>
+
+<div class="dropdown-content">
+
+<a href="government.html">General Information</a>
+<a href="president.html">President</a>
+<a href="parliament.html">Parliament</a>
+<a href="indigenous.html">Indigenous Leadership</a>
+<a href="constitution.html">Constitution</a>
+
+</div>
+
+</div>
+
 <a href="history.html">History</a>
 <a href="language.html">Language</a>
 <a href="news.html">News</a>
